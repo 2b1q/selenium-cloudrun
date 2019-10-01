@@ -1,0 +1,23 @@
+{
+  "name": "knative-selenium-web-api",
+  "version": "1.0.0",
+  "description": "selenium webdriver nodejs knative app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "selenium",
+    "cloudrun",
+    "nodejs"
+  ],
+  "author": "2b1q",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "selenium-standalone": "^6.16.0",
+    "selenium-webdriver": "^4.0.0-alpha.5"
+  }
+}
