@@ -16,9 +16,11 @@ exports.run = (req, res) => {
 // selenium hardcoded runner
 const test = () =>
   new Promise(async (resolve, reject) => {
+    const browser = process.env.browser;
+    const hub_link = process.env.hub ? `http://${process.env.hub}:4444/wd/hub` : undefined;
     let driver;
     try {
-      driver = new Driver().driver;
+      driver = new Driver(browser, hub_link).driver;
       await driver.get('http://www.google.com/ncr');
       await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
       await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
