@@ -13,12 +13,20 @@ Prerequisites:
 $ git clone https://github.com/2b1q/selenium-cloudrun.git
 ```
 
-2. build stack using docker-composer
+2. build and run stack using docker-composer
 
 ```sh
 $ cd selenium-cloudrun
 $ docker-compose up
 
+```
+
+3. to stop all stack containers press "CTRL+C"
+
+4. remove all containers
+
+```sh
+docker-compose down
 ```
 
 ## test
