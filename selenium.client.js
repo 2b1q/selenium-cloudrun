@@ -9,11 +9,16 @@ const { Builder, By, Key, until } = require('selenium-webdriver');
 // SELENIUM_BROWSER=chrome:36:LINUX \
 // SELENIUM_REMOTE_URL=http://www.example.com:4444/wd/hub \
 class Driver {
-  constructor(browser = 'chrome', server = 'https://selenode-debug-7cpfp2vfoa-ew.a.run.app/wd/hub') {
-    this.driver = new Builder()
-      .forBrowser(browser)
-      .usingServer(server)
-      .build();
+  //   constructor(browser = 'firefox', server = 'https://standalone-firefox-7cpfp2vfoa-uc.a.run.app/wd/hub') {
+  constructor(browser = 'chrome', server = 'http://127.0.0.1:4444/wd/hub') {
+    try {
+      this.driver = new Builder()
+        .forBrowser(browser)
+        .usingServer(server)
+        .build();
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 

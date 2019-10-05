@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/redir :8080 127.0.0.1:4444
+/usr/bin/redir 0.0.0.0:8080 localhost:4444

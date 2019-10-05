@@ -12,6 +12,8 @@ COPY package*.json ./
 RUN sudo npm install --only=production
 # RUN sudo npm install selenium-standalone@latest -g
 # RUN sudo selenium-standalone install
+# sudo /opt/bin/start-xvfb.sh & sudo /opt/bin/start-selenium-standalone.sh & node app.js
+# "start": "sudo sudo selenium-standalone start --drivers.chrome.version=2.43 --drivers.chrome.baseURL=https://chromedriver.storage.googleapis.com & node app.js"
 
 # EXPOSE 4444
 

@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "/opt/bin/entry_point.sh & node app.js"
   },
   "keywords": [
     "selenium",
@@ -17,7 +17,6 @@
   "dependencies": {
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
-    "selenium-standalone": "^6.16.0",
     "selenium-webdriver": "^4.0.0-alpha.5"
   }
 }
