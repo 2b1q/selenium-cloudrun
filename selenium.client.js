@@ -11,14 +11,10 @@ const { Builder, By, Key, until } = require('selenium-webdriver');
 class Driver {
   //   constructor(browser = 'firefox', server = 'https://standalone-firefox-7cpfp2vfoa-uc.a.run.app/wd/hub') {
   constructor(browser = 'chrome', server = 'http://127.0.0.1:4444/wd/hub') {
-    try {
-      this.driver = new Builder()
-        .forBrowser(browser)
-        .usingServer(server)
-        .build();
-    } catch (error) {
-      console.log(error);
-    }
+    this.driver = new Builder()
+      .forBrowser(browser)
+      .usingServer(server)
+      .build();
   }
 }
 
